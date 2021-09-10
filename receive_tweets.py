@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[9]:
-
-
-#!/usr/bin/env python
-
 import tweepy
 from tweepy.auth import OAuthHandler
 from tweepy import Stream
@@ -14,10 +6,10 @@ import socket
 import json
 
 # request to get credentials at http://apps.twitter.com
-consumer_key    = '3XwgFgsXucaFXOrkZtlwvxV5O'
-consumer_secret = 'LNnTcxibKalylVImljDsKfkRqb6WHD8I7hdSYt7Pm7VaCetqZm'
-access_token    = '608048932-AM21gcwLORlm5j0514DwPL850byLb7Gs04bPZ6Mn'
-access_secret   = 'QtnJ8mV75peV7L7Kd4DZKogMRIxzjk5XFOPtZiz62NoM3'
+consumer_key    = '<Enter API Key>'
+consumer_secret = '<Enter API Key Secret>'
+access_token    = '<Enter Access Token>'
+access_secret   = '<Enter Access Token Secret>'
 
 # we create this class that inherits from the StreamListener in tweepy StreamListener
 class TweetsListener(StreamListener):
@@ -63,10 +55,3 @@ if __name__ == "__main__":
     print("Received request from: " + str(addr))
     # and after accepting the connection, we aill sent the tweets through the socket
     send_tweets(c)
-
-
-# In[ ]:
-
-
-
-
