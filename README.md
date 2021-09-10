@@ -1,5 +1,5 @@
 # Twitter Streaming Data
-This repository consists of code that explores Twitter's streaming data using Spark and Python.
+This tutorial uses Twitter's streaming data to identify trending #tags in Singapore. Our analysis uses Python and Spark. The repository contains two files, **receive_tweets.py** and **read_tweets.py**. We use receive_tweets.py to gather tweets and read_tweets.py to explore trending #tags in Singapore. 
 
 We use following versions of Spark, Hadoop, Python, Java, and Winutils.
 
