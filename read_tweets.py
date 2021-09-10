@@ -1,16 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import findspark
 findspark.init()
 import pyspark
-
-
-# In[2]:
-
 
 # import necessary packages
 from pyspark import SparkContext
@@ -18,27 +8,15 @@ from pyspark.streaming import StreamingContext
 from pyspark.sql import SQLContext
 from pyspark.sql.functions import desc
 
-
-# In[3]:
-
-
 sc = SparkContext()
 # we initiate the StreamingContext with 10 second batch interval. #next we initiate our sqlcontext
 ssc = StreamingContext(sc, 10)
 sqlContext = SQLContext(sc)
 
-
-# In[4]:
-
-
 # initiate streaming text from a TCP (socket) source:
 socket_stream = ssc.socketTextStream("127.0.0.1", 5555)
 # lines of tweets with socket_stream window of size 60, or 60 #seconds windows of time
 lines = socket_stream.window(60)
-
-
-# In[5]:
-
 
 # just a tuple to assign names
 from collections import namedtuple
@@ -57,16 +35,8 @@ Tweet = namedtuple( 'Tweet', fields )
  # Registers only top 10 hashtags to a table.
   .limit(10).registerTempTable("tweets") ) )
 
-
-# In[6]:
-
-
 # start streaming and wait couple of minutes to get enought tweets
 ssc.start()
-
-
-# In[10]:
-
 
 # import libraries to visualize the results
 import time
@@ -88,16 +58,5 @@ while count < 5:
     count = count + 1
     print(count)
 
-
-# In[12]:
-
-
 # stop streaming and wait couple of minutes to get enought tweets
 ssc.stop()
-
-
-# In[ ]:
-
-
-
-
