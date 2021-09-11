@@ -1,4 +1,4 @@
-# Twitter Streaming Data
+# Exploring Twitter Streaming Data using Python and Spark
 This tutorial uses Twitter's streaming data to identify trending #tags in the topic football. Our analysis uses Python and Spark. The repository contains four files, **receive_tweets.ipynb**, **receive_tweets.py**, **read_tweets.ipynb** and **read_tweets.py**. We implemented this tutorial in Jupyter notebook using receive_tweets.ipynb to gather tweets and read_tweets.ipynb to explore trending #tags in topic football. 
 
 We use following versions of Spark, Hadoop, Python, Java, and Winutils.
