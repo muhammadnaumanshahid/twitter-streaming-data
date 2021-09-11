@@ -37,7 +37,7 @@ def send_tweets(c_socket):
     auth.set_access_token(access_token, access_secret)
     
     twitter_stream = Stream(auth, TweetsListener(c_socket))
-    twitter_stream.filter(track=['football'])
+    twitter_stream.filter(track=['football']) #we are interested in this topic.
 
 
 
