@@ -1,5 +1,5 @@
 # Twitter Streaming Data
-This tutorial uses Twitter's streaming data to identify trending #tags in Singapore. Our analysis uses Python and Spark. The repository contains two files, **receive_tweets.py** and **read_tweets.py**. We use receive_tweets.py to gather tweets and read_tweets.py to explore trending #tags in Singapore. 
+This tutorial uses Twitter's streaming data to identify trending #tags in the topic football. Our analysis uses Python and Spark. The repository contains four files, **receive_tweets.ipynb**, **receive_tweets.py**, **read_tweets.ipynb** and **read_tweets.py**. We implemented this tutorial in Jupyter notebook using receive_tweets.ipynb to gather tweets and read_tweets.ipynb to explore trending #tags in topic football. 
 
 We use following versions of Spark, Hadoop, Python, Java, and Winutils.
 
